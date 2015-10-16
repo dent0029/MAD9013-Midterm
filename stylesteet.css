@@ -1,13 +1,12 @@
 @@charset "utf-8";
 @import url ("https://fonts.googleapis.com/css?family=Source+Serif+Pro")
-Colors:
+/*Colors:
     #4D3A7F;
     #D2C1FF;
     #9A75FF;
     #60557F;
-    #7B5ECC; 
-*
-{
+    #7B5ECC;*/ 
+*{
     padding:0; 
     margin:0; 
     box-sizing:border-box;
@@ -57,7 +56,7 @@ header.masthead
     {
 	    padding:1rem;
         background-image: url("http://lorempixel.com/1200/900/cats/");
-        background-size: 100% 100%;
+        background-size: cover;
     }
 nav.mainnav ul 
     {
@@ -80,7 +79,6 @@ nav.mainnav ul li a:hover
     }
 main.content 
     {
-	   padding:.2rem;
     }
 img.left
     {
@@ -102,8 +100,7 @@ img
 	   max-width:100%;
     }
 @media all and (max-width: 35em)
-    {
-        
+    { 
     }
         
 @media all and (max-width: 60em) and (min-width: 35em)
@@ -111,11 +108,12 @@ img
         .masthead
             {
                 margin-bottom: 1.5%;
-                width: 100%;     
+                width: 100%;  
+                
             }
         .mainnav ul li
             {
-                display: inline-block;
+                display: block;
                 float: left;
                 width: 25%;
                 margin-bottom: 1.5%;
@@ -159,17 +157,25 @@ img
     }
 @media all and (min-width: 60em)
     {
+        .masthead
+            {
+                postion: absolute;
+                top: 0;
+                left:0;
+                width: 100%;
+                /*min-height:200px;*/
+                height:200px;
+            }
         .mainnav ul li
             {
-                display: inline-block;
-                float: center;
-                width: 25%;
-                margin-bottom: 1.5%;
+                display: block;
+                
+                margin:0 0 1.5% 0;
             }
 	
 	   aside.side p
             {
-                font-size: 0.8rem;
+                font-size: 1rem;
             }
 	   h1
             {
@@ -186,27 +192,51 @@ img
             }
 	   nav.mainnav ul
             {
-                width:25%;
-                float:left;
+                padding-bottom: 100px;
+                background-image: url("http://lorempixel.com/1200/900/cats/");
+                width:100%;
+                padding:0;
+                margin:0;
             }
+        nav.mainnav
+        {
+            float:left;
+            width:23%;
+            padding:0;
+            margin:0;
+        }
 	   main.content
             {
+               -webkit-column-width: 49% ;
+                -moz-column-width: 49% ;
+                column-width:49% ;
+                
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+                
+                -webkit-column-gap:2%;
+                -moz-column-gap:2%;
+                column-gap:2%;
+                
+                float: left;
+                width: 50%;
+                padding:7px;
                 
 	       }
 	   aside.side 
             {
                 width:25%;
                 float:right;
-                border-left:1px solid #eee;
+                padding:0;
 	        }
 	   img.left
             {
                 float:none;
-                margin:0.25rem 0 0 0;
+                
             }
-	img.right
+	   img.right
             {
                 float:none;
-                margin:0.25rem 0 0 0;
             }
     }
