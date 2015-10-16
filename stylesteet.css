@@ -121,13 +121,13 @@ img
             }
         .mainnav ul li a
             {
-                padding: 1.5% 0;
+                padding: ;
             }
 
         .content
             {
                 float: left;
-                width: 63%;
+                width: 62%;
             }
 
         .primary
@@ -143,8 +143,9 @@ img
         .side
             {
                 float: right;
-                width: 37%;
+                width: 36%;
                 margin: 0;
+                padding-left:0;
             }
 
         .footer
@@ -169,7 +170,6 @@ img
         .mainnav ul li
             {
                 display: block;
-                
                 margin:0 0 1.5% 0;
             }
 	
